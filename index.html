@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No Waste</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🥘 No Waste</h1>
+    <p class="subtitle">Rezepte finden, bevor Lebensmittel verderben</p>
+  </header>
+
+  <main>
+    <!-- Profil-Bereich: Allergene + Ernährungspräferenz (einmalig, wird gespeichert) -->
+    <section id="profil-bereich" class="card">
+      <h2>1. Dein Profil</h2>
+      <div class="form-group">
+        <label>Allergene / Unverträglichkeiten:</label>
+        <div id="allergene-auswahl" class="chip-container"></div>
+      </div>
+      <div class="form-group">
+        <label for="ernaehrung-select">Ernährungsweise:</label>
+        <select id="ernaehrung-select"></select>
+      </div>
+      <button id="profil-speichern-btn">Profil speichern</button>
+      <p id="profil-status" class="status-text"></p>
+    </section>
+
+    <!-- Zutaten-Auswahl -->
+    <section id="zutaten-bereich" class="card">
+      <h2>2. Was hast du zuhause?</h2>
+      <div class="form-group">
+        <label for="zutaten-suche">Zutat suchen:</label>
+        <input type="text" id="zutaten-suche" placeholder="z.B. Reis, Zwiebel...">
+      </div>
+      <div id="zutaten-auswahl"></div>
+    </section>
+
+    <!-- Filter -->
+    <section id="suche-bereich" class="card">
+      <h2>3. Rezepte finden</h2>
+      <div class="form-group">
+        <label for="kategorie-select">Kategorie:</label>
+        <select id="kategorie-select"></select>
+      </div>
+      <button id="suchen-btn">Rezepte suchen</button>
+    </section>
+
+    <!-- Ergebnisliste -->
+    <section id="ergebnis-bereich" class="card">
+      <h2>Ergebnisse</h2>
+      <div id="ergebnis-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>No Waste · Projekt für Einführung in die Wirtschaftsinformatik</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="algorithm.js"></script>
+  <script src="ui-helpers.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
