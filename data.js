@@ -9,7 +9,7 @@
 const REZEPTE = [
   {
     id: 1,
-    name: "TEST",
+    name: "Rührei mit Speck",
     icon: "🍳",
     kategorie: "Frühstück",
     zubereitungszeit_min: 10,
