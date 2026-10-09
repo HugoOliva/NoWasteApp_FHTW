@@ -3,21 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>No Waste - Rezept</title>
+  <title>No Waste – Rezept</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>🥘 No Waste</h1>
-    <a class="back-link" href="index.html">← Zurück zur Übersicht</a>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-dot" aria-hidden="true">🥘</span> No Waste</a>
+    <nav class="topnav" aria-label="Hauptnavigation">
+      <a href="index.html">Start</a>
+      <a href="suche.html">Rezeptsuche</a>
+    </nav>
   </header>
 
   <main>
+    <a class="back-link" href="suche.html">← Zurück zu den Ergebnissen</a>
     <div id="detail-container">
-      <p class="empty-state">Rezept wird geladen...</p>
+      <p class="leer">Rezept wird geladen …</p>
     </div>
   </main>
 

@@ -1,6 +1,6 @@
 /**
  * No Waste - Datenbasis
- * 73 Rezepte über Frühstück, Mittag/Abend und Süßspeisen, mit gewichteten
+ * 81 Rezepte über Frühstück, Mittag/Abend und Süßspeisen, mit gewichteten
  * und als "essenziell" (Hauptzutat) oder optional (Nebenzutat) markierten
  * Zutaten, Allergenen (angelehnt an die 14 EU-Hauptallergene), Nährwerten
  * und Zubereitungsschritten.
@@ -1284,13 +1284,152 @@ const REZEPTE = [
     ],
     zubereitung: ["Reis mit Milch aufkochen.", "Bei kleiner Hitze 20 Minuten quellen lassen, gelegentlich rühren.", "Mit Zimt und Zucker servieren."],
   },
+  {
+    id: 74,
+    name: "Hühnchen in Sahnesauce",
+    icon: "🍗",
+    kategorie: "Mittag/Abend",
+    zubereitungszeit_min: 30,
+    ernaehrungskategorie: "omnivor",
+    allergene: ["Laktose"],
+    naehrwerte: { kcal: 520, eiweiss_g: 38, fett_g: 36, kohlenhydrate_g: 6 },
+    zutaten: [
+      { name: "Hühnerbrust", gewicht: 5, essenziell: true },
+      { name: "Sahne", gewicht: 4, essenziell: true },
+      { name: "Zwiebel", gewicht: 1, essenziell: false },
+      { name: "Knoblauch", gewicht: 1, essenziell: false },
+      { name: "Paprikapulver", gewicht: 1, essenziell: false },
+    ],
+    zubereitung: ["Hühnerbrust in Stücke schneiden, würzen und goldbraun anbraten.", "Zwiebel und Knoblauch kurz mitdünsten.", "Mit Sahne ablöschen, Paprikapulver zugeben und 10 Minuten sanft köcheln lassen."],
+  },
+  {
+    id: 75,
+    name: "Hähnchen-Reispfanne mit Sahne",
+    icon: "🍛",
+    kategorie: "Mittag/Abend",
+    zubereitungszeit_min: 35,
+    ernaehrungskategorie: "omnivor",
+    allergene: ["Laktose"],
+    naehrwerte: { kcal: 610, eiweiss_g: 36, fett_g: 28, kohlenhydrate_g: 52 },
+    zutaten: [
+      { name: "Hühnerbrust", gewicht: 4, essenziell: true },
+      { name: "Reis", gewicht: 4, essenziell: true },
+      { name: "Sahne", gewicht: 2, essenziell: true },
+      { name: "Zwiebel", gewicht: 1, essenziell: false },
+      { name: "Erbsen", gewicht: 1, essenziell: false },
+    ],
+    zubereitung: ["Reis nach Packungsanleitung kochen.", "Hühnerbrust in Würfel schneiden und mit Zwiebel anbraten.", "Erbsen und Sahne zugeben, kurz einkochen lassen.", "Den Reis unterheben und abschmecken."],
+  },
+  {
+    id: 76,
+    name: "Erbsen-Sahne-Reis",
+    icon: "🍚",
+    kategorie: "Mittag/Abend",
+    zubereitungszeit_min: 25,
+    ernaehrungskategorie: "vegetarisch",
+    allergene: ["Laktose"],
+    naehrwerte: { kcal: 480, eiweiss_g: 12, fett_g: 22, kohlenhydrate_g: 60 },
+    zutaten: [
+      { name: "Reis", gewicht: 4, essenziell: true },
+      { name: "Sahne", gewicht: 3, essenziell: true },
+      { name: "Erbsen", gewicht: 2, essenziell: false },
+      { name: "Zwiebel", gewicht: 1, essenziell: false },
+    ],
+    zubereitung: ["Zwiebel fein würfeln und glasig dünsten.", "Reis kurz mitrösten, mit Wasser aufgießen und garen.", "Erbsen und Sahne zugeben und cremig einkochen."],
+  },
+  {
+    id: 77,
+    name: "Pasta mit Speck-Sahnesauce",
+    icon: "🍝",
+    kategorie: "Mittag/Abend",
+    zubereitungszeit_min: 20,
+    ernaehrungskategorie: "omnivor",
+    allergene: ["Gluten", "Laktose"],
+    naehrwerte: { kcal: 640, eiweiss_g: 24, fett_g: 34, kohlenhydrate_g: 58 },
+    zutaten: [
+      { name: "Pasta", gewicht: 4, essenziell: true },
+      { name: "Speck", gewicht: 3, essenziell: true },
+      { name: "Sahne", gewicht: 3, essenziell: true },
+      { name: "Zwiebel", gewicht: 1, essenziell: false },
+    ],
+    zubereitung: ["Pasta in Salzwasser bissfest kochen.", "Speck mit Zwiebel in der Pfanne knusprig braten.", "Mit Sahne ablöschen und kurz einkochen.", "Pasta in der Sauce schwenken."],
+  },
+  {
+    id: 78,
+    name: "Beeren mit Vanillesahne",
+    icon: "🍓",
+    kategorie: "Süßspeise",
+    zubereitungszeit_min: 10,
+    ernaehrungskategorie: "vegetarisch",
+    allergene: ["Laktose"],
+    naehrwerte: { kcal: 280, eiweiss_g: 3, fett_g: 20, kohlenhydrate_g: 22 },
+    zutaten: [
+      { name: "Sahne", gewicht: 4, essenziell: true },
+      { name: "Beeren", gewicht: 3, essenziell: true },
+      { name: "Vanille", gewicht: 1, essenziell: false },
+      { name: "Zucker", gewicht: 1, essenziell: false },
+    ],
+    zubereitung: ["Sahne mit Zucker und Vanille steif schlagen.", "Beeren waschen und in Gläser schichten.", "Die Vanillesahne darübergeben und sofort servieren."],
+  },
+  {
+    id: 79,
+    name: "Kartoffelgratin",
+    icon: "🥔",
+    kategorie: "Mittag/Abend",
+    zubereitungszeit_min: 60,
+    ernaehrungskategorie: "vegetarisch",
+    allergene: ["Laktose"],
+    naehrwerte: { kcal: 410, eiweiss_g: 12, fett_g: 26, kohlenhydrate_g: 34 },
+    zutaten: [
+      { name: "Kartoffel", gewicht: 5, essenziell: true },
+      { name: "Sahne", gewicht: 4, essenziell: true },
+      { name: "Käse", gewicht: 2, essenziell: false },
+      { name: "Knoblauch", gewicht: 1, essenziell: false },
+    ],
+    zubereitung: ["Kartoffeln schälen und in dünne Scheiben schneiden.", "In eine Form schichten, mit Knoblauch und Sahne übergießen.", "Mit Käse bestreuen und bei 180 °C etwa 45 Minuten backen."],
+  },
+  {
+    id: 80,
+    name: "Lachs in Sahnesauce mit Reis",
+    icon: "🐟",
+    kategorie: "Mittag/Abend",
+    zubereitungszeit_min: 30,
+    ernaehrungskategorie: "pescetarisch",
+    allergene: ["Fisch", "Laktose"],
+    naehrwerte: { kcal: 590, eiweiss_g: 34, fett_g: 32, kohlenhydrate_g: 38 },
+    zutaten: [
+      { name: "Lachs", gewicht: 4, essenziell: true },
+      { name: "Sahne", gewicht: 3, essenziell: true },
+      { name: "Reis", gewicht: 3, essenziell: true },
+      { name: "Zitrone", gewicht: 1, essenziell: false },
+    ],
+    zubereitung: ["Reis kochen.", "Lachs in Stücken in der Pfanne von beiden Seiten anbraten.", "Mit Sahne und einem Spritzer Zitrone ablöschen und kurz ziehen lassen.", "Mit dem Reis servieren."],
+  },
+  {
+    id: 81,
+    name: "Kürbis-Sahnesuppe",
+    icon: "🎃",
+    kategorie: "Mittag/Abend",
+    zubereitungszeit_min: 35,
+    ernaehrungskategorie: "vegetarisch",
+    allergene: ["Laktose"],
+    naehrwerte: { kcal: 260, eiweiss_g: 5, fett_g: 16, kohlenhydrate_g: 24 },
+    zutaten: [
+      { name: "Kürbis", gewicht: 5, essenziell: true },
+      { name: "Sahne", gewicht: 2, essenziell: false },
+      { name: "Zwiebel", gewicht: 1, essenziell: false },
+      { name: "Ingwer", gewicht: 1, essenziell: false },
+    ],
+    zubereitung: ["Kürbis und Zwiebel würfeln und in einem Topf anrösten.", "Mit Wasser bedecken, Ingwer zugeben und weich kochen.", "Pürieren und mit Sahne verfeinern."],
+  },
 ];
 
 // Substitutionstabelle: welche Zutaten sich gegenseitig ersetzen können
 const SUBSTITUTIONEN = {
   "Mehl": ["Maisstärke"],
   "Maisstärke": ["Mehl"],
-  "Milch": ["Joghurtsauce", "Joghurt"],
+  "Milch": ["Joghurtsauce", "Joghurt", "Sahne"],
+  "Sahne": ["Milch", "Mascarpone", "Frischkäse"],
   "Joghurtsauce": ["Milch"],
   "Joghurt": ["Milch"],
   "Ei": ["Apfelmus"],
@@ -1306,7 +1445,7 @@ const ZUTATEN_KATEGORIEN = {
   "Obst": ["Zitrone", "Äpfel", "Banane", "Orange", "Trauben", "Beeren", "Rosinen", "Trockenfrüchte", "Apfelmus"],
   "Fleisch & Fisch": ["Hühnerbrust", "Rindfleisch", "Speck", "Hackfleisch", "Lachs", "Thunfisch", "Schnitzel", "Meeresfrüchte"],
   "Pflanzliche Proteine": ["Tofu", "Kichererbsen", "Linsen", "Kidneybohnen"],
-  "Milchprodukte & Eier": ["Milch", "Käse", "Butter", "Joghurtsauce", "Ei", "Parmesan", "Joghurt", "Frischkäse", "Topfen", "Mozzarella", "Feta", "Mascarpone"],
+  "Milchprodukte & Eier": ["Milch", "Käse", "Butter", "Joghurtsauce", "Ei", "Parmesan", "Joghurt", "Frischkäse", "Topfen", "Mozzarella", "Feta", "Mascarpone", "Sahne"],
   "Getreide & Beilagen": ["Reis", "Pasta", "Spaghetti", "Spätzle", "Quinoa", "Mehl", "Haferflocken", "Tortilla", "Brot", "Blätterteig", "Bagel", "Pizzateig", "Burger-Brötchen", "Reisnudeln", "Lasagneplatten", "Couscous", "Gnocchi", "Löffelbiskuit"],
   "Gewürze & Sonstiges": ["Curry", "Kokosmilch", "Paprikapulver", "Kreuzkümmel", "Zimt", "Sojasauce", "Olivenöl", "Tahini", "Honig", "Zucker", "Puderzucker", "Maisstärke", "Kakao", "Nüsse", "Tomatensauce", "Kurkuma", "Basilikum", "Ketchup", "Misopaste", "Pesto", "Kaffee", "Vanille", "Mohn", "Marmelade"],
 };
@@ -1322,3 +1461,34 @@ const ERNAEHRUNGSOPTIONEN = ["", "vegan", "vegetarisch", "pescetarisch", "omnivo
 
 // Mahlzeit-Kategorien zum Filtern
 const KATEGORIEN = ["Alle", "Frühstück", "Mittag/Abend", "Süßspeise"];
+
+// Vorratsschrank: Diese Zutaten gelten als zuhause vorhanden (zusätzlich zu Salz,
+// Pfeffer und Wasser, die in den Rezepten gar nicht erst aufgeführt werden).
+// So muss der Nutzer nur seine "Reste" eingeben.
+const BASICS = [
+  "Olivenöl", "Mehl", "Zucker", "Puderzucker", "Paprikapulver",
+  "Kreuzkümmel", "Zimt", "Curry", "Kurkuma", "Vanille", "Sojasauce",
+];
+
+// Alternative Namen für die Zutatensuche (z. B. österreichische Begriffe)
+const ALIASE = {
+  "Hühnerbrust": ["Geflügel", "Geflügelfleisch", "Huhn", "Hühnchen", "Hähnchen", "Pute", "Putenfleisch"],
+  "Sahne": ["Schlagsahne", "Obers", "Schlagobers", "Rahm"],
+  "Topfen": ["Quark"],
+  "Kartoffel": ["Kartoffeln", "Erdäpfel"],
+  "Karotte": ["Karotten", "Möhre", "Möhren"],
+  "Ei": ["Eier"],
+  "Hackfleisch": ["Faschiertes"],
+  "Paprika": ["Paprikaschote"],
+  "Pasta": ["Nudeln"],
+  "Spaghetti": ["Nudeln"],
+  "Zwiebel": ["Zwiebeln"],
+  "Äpfel": ["Apfel"],
+  "Schnitzel": ["Schweinefleisch", "Schwein"],
+  "Rindfleisch": ["Rind"],
+  "Tomatensauce": ["Tomaten", "Passata"],
+  "Joghurt": ["Naturjoghurt"],
+  "Käse": ["Reibkäse", "Gouda", "Emmentaler"],
+  "Beeren": ["Erdbeeren", "Himbeeren", "Heidelbeeren"],
+  "Brot": ["Toast", "Semmel"],
+};

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No Waste – Rezeptsuche</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-dot" aria-hidden="true">🥘</span> No Waste</a>
+    <nav class="topnav" aria-label="Hauptnavigation">
+      <a href="index.html">Start</a>
+      <a href="suche.html" aria-current="page">Rezeptsuche</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-title">
+      <span class="icon-big" aria-hidden="true">🥕</span>
+      <h1>Rezeptsuche</h1>
+    </div>
+    <p class="intro">Gib bis zu drei Reste ein. Wir zeigen dir zuerst Rezepte, die möglichst viele davon verwenden, danach Kombinationen und zuletzt Rezepte für einzelne Reste.</p>
+
+    <!-- Profil: Ernährungsweise + Allergene -->
+    <div class="profil-zeile">
+      <span aria-hidden="true">✏️</span>
+      <span>Ernährungsart: <strong id="profil-ernaehrung">keine Einschränkung</strong></span>
+      <span id="profil-allergene-zeile" hidden>· Allergene: <strong id="profil-allergene"></strong></span>
+      <button type="button" class="link-btn" id="profil-toggle" aria-expanded="false" aria-controls="profil-panel">Ändern</button>
+    </div>
+
+    <section id="profil-panel" class="profil-panel" hidden aria-label="Profil bearbeiten">
+      <label class="field-label" for="ernaehrung-select">Ernährungsweise</label>
+      <select id="ernaehrung-select"></select>
+      <span class="field-label" id="allergene-label">Allergene / Unverträglichkeiten (diese Rezepte blenden wir aus)</span>
+      <div id="allergene-auswahl" class="chip-container" role="group" aria-labelledby="allergene-label"></div>
+      <p id="profil-status" class="status-text" role="status"></p>
+    </section>
+
+    <!-- Zutateneingabe -->
+    <div class="suche-box">
+      <label for="zutat-input">Zutat eingeben</label>
+      <div class="input-wrap">
+        <span class="input-icon" aria-hidden="true">🔍</span>
+        <input type="text" id="zutat-input" placeholder="z. B. Reis, Geflügel, Sahne" autocomplete="off"
+               role="combobox" aria-expanded="false" aria-controls="vorschlaege" aria-autocomplete="list">
+      </div>
+      <ul id="vorschlaege" class="vorschlaege" role="listbox" aria-label="Zutatenvorschläge" hidden></ul>
+
+      <div class="reste-zeile" aria-live="polite">
+        <span id="reste-chips" style="display:contents"></span>
+        <span class="reste-zaehler" id="reste-zaehler">0 von 3 Resten</span>
+      </div>
+    </div>
+
+    <!-- Optionen -->
+    <div class="optionen">
+      <div>
+        <label class="field-label" for="kategorie-select">Mahlzeit</label>
+        <select id="kategorie-select"></select>
+      </div>
+      <label class="schalter">
+        <input type="checkbox" id="komplett-schalter">
+        <span>Nur Rezepte, die ich komplett kochen kann
+          <small>Zeigt nur Rezepte, bei denen alle Hauptzutaten bei dir vorhanden oder ersetzbar sind.</small>
+        </span>
+      </label>
+    </div>
+
+    <details class="basics-info">
+      <summary>Was wir als vorhanden annehmen</summary>
+      <p>Salz, Pfeffer und Wasser sowie <span id="basics-liste"></span>. Du musst sie nicht eingeben.</p>
+    </details>
+
+    <div class="aktionen">
+      <p class="hinweis" id="hinweis">Bitte gib mindestens eine Zutat ein. Du kannst bis zu drei Lebensmittel auswählen.</p>
+      <button type="button" class="btn" id="finden-btn" disabled>Rezepte finden</button>
+    </div>
+
+    <!-- Ergebnisse -->
+    <section id="ergebnisse" class="ergebnisse" hidden aria-live="polite" tabindex="-1">
+      <div class="ergebnis-kopf">
+        <h2>Deine Rezepte</h2>
+        <p id="ergebnis-text"></p>
+      </div>
+      <div id="ergebnis-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>No Waste · Projekt für Einführung in die Wirtschaftsinformatik</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="algorithm.js"></script>
+  <script src="ui-helpers.js"></script>
+  <script src="suche.js"></script>
+</body>
+</html>
